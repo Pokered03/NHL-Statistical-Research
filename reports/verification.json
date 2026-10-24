@@ -1,7 +1,7 @@
 {
   "software_tests_passed": 35,
   "unrelated_adapter_tests_skipped": 6,
-  "test_seconds": 2.39,
+  "test_seconds": 1.93,
   "sqlite_integrity": "ok",
   "foreign_keys": "ok",
   "local_http_server": {
@@ -55,8 +55,23 @@
     "target_peak_rss_mib": 650,
     "hosting_environment": false
   },
-  "deployment_tested": false,
+  "deployment_tested": true,
   "mobile_browser_tested": false,
-  "scheduled_refresh_active": false,
-  "github_published": false
+  "scheduled_refresh_active": true,
+  "github_published": true,
+  "hosted_initial_checks": {
+    "date": "2026-10-24",
+    "process_peak_mib": 170.2,
+    "exposed_host_limit_mib": 3072,
+    "sampled_container_mib": [
+      688.7,
+      700.3
+    ],
+    "controlled_restart_passed": true,
+    "post_restart_process_peak_mib": 161.4,
+    "refresh_run": "https://github.com/Pokered03/NHL-Statistical-Research/actions/runs/40120898566",
+    "refresh_success_seconds": 33,
+    "worker_update": "2026-10-24T18:29:26.471859+00:00",
+    "sustained_load_tested": false
+  }
 }
