@@ -1,0 +1,90 @@
+{
+  "n": 1787,
+  "brier": 0.24477769157725024,
+  "baseline_brier": 0.25,
+  "accuracy": 0.5540011191941802,
+  "margin_mae": 2.1738078831983643,
+  "total_mae": 1.849328305663664,
+  "ece": 0.01020118853207568,
+  "calibration_bins": [
+    {
+      "lower": 0.3,
+      "n": 36,
+      "predicted": 0.3648990978186371,
+      "observed": 0.4166666666666667
+    },
+    {
+      "lower": 0.4,
+      "n": 410,
+      "predicted": 0.46407906336458843,
+      "observed": 0.4853658536585366
+    },
+    {
+      "lower": 0.5,
+      "n": 1018,
+      "predicted": 0.5491148403122251,
+      "observed": 0.5471512770137524
+    },
+    {
+      "lower": 0.6,
+      "n": 305,
+      "predicted": 0.6344016828421142,
+      "observed": 0.6196721311475409
+    },
+    {
+      "lower": 0.7,
+      "n": 18,
+      "predicted": 0.7303825946156333,
+      "observed": 0.6666666666666666
+    }
+  ],
+  "margin_interval_80_coverage": 0.7895914941242306,
+  "version": "adjusted-score-v1",
+  "status": "tested",
+  "gate": true,
+  "calibration_n": 2185,
+  "calibration_through": "2025-03-04",
+  "test_from": "2025-03-05",
+  "test_through": "2026-10-23",
+  "oos_games": 3972,
+  "calibrator": {
+    "intercept": 0.11186532197346792,
+    "slope": 0.597406861548635
+  },
+  "margin_sd": 2.6081041347511422,
+  "margin_q10": -3.346917242593827,
+  "margin_q90": 3.392823123852073,
+  "total_q10": -2.9815804722688264,
+  "total_q90": 2.942786836351678,
+  "baseline_margin_mae": 2.2234832409856207,
+  "baseline_total_mae": 1.8340359697786977,
+  "reason": "Gate requires >=200 calibration and test games, ECE <=0.10, Brier better than 50%, successful calibration. Thresholds are engineering safeguards, not proof of profitability.",
+  "exclusions": "Draws excluded from win calibration; all scoring includes overtime/shootout scores as reported. No historical market prices are available; spread/total category reliability is unvalidated.",
+  "market_validation": {
+    "spread": {
+      "n": 0,
+      "gate": false,
+      "reason": "No verified historical lines.",
+      "pushes_excluded": 0,
+      "source": null,
+      "line_range": null
+    },
+    "total": {
+      "n": 0,
+      "gate": false,
+      "reason": "No verified historical lines.",
+      "pushes_excluded": 0,
+      "source": null,
+      "line_range": null
+    }
+  },
+  "early": {
+    "n": 167,
+    "margin_mae": 2.1786946290987292
+  },
+  "late": {
+    "n": 1620,
+    "margin_mae": 2.1733041260592523
+  },
+  "generated_at": "2026-10-24T18:21:42.310690+00:00"
+}

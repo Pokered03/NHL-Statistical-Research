@@ -1,0 +1,35 @@
+{
+  "sport": "nhl",
+  "environment": "local Streamlit AppTest; not deployed hosting",
+  "cold_render_seconds": 0.6793499620007424,
+  "initial_matchup_render_seconds": 0.0399811140005113,
+  "switch_p95_seconds": 0.07168628999988869,
+  "switches": 64,
+  "rss_samples": [
+    {
+      "switch": 8,
+      "peak_rss_mib": 140.12890625
+    },
+    {
+      "switch": 16,
+      "peak_rss_mib": 141.23046875
+    },
+    {
+      "switch": 32,
+      "peak_rss_mib": 143.6484375
+    },
+    {
+      "switch": 64,
+      "peak_rss_mib": 143.75
+    }
+  ],
+  "peak_rss_mib": 143.75,
+  "db_mib": 5.703125,
+  "targets": {
+    "cold_render_seconds": 10,
+    "switch_p95_seconds": 2,
+    "peak_rss_mib": 350
+  },
+  "actual_host_limits_tested": false,
+  "local_targets_pass": true
+}

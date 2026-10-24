@@ -1,0 +1,23 @@
+{
+  "sport": "nhl",
+  "database_bytes": 5980160,
+  "seasons": [
+    {
+      "season": 2024,
+      "games": 1400
+    },
+    {
+      "season": 2025,
+      "games": 1398
+    },
+    {
+      "season": 2026,
+      "games": 1394
+    },
+    {
+      "season": 2027,
+      "games": 1344
+    }
+  ],
+  "integrity": "ok"
+}

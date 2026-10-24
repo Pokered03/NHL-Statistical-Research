@@ -1,0 +1,9 @@
+{
+  "sport": "nhl",
+  "operation": "Active-season cached free-data refresh plus full chronological validation",
+  "seconds": 13.524582482000369,
+  "worker_peak_rss_mib": 206.76171875,
+  "exit_code": 0,
+  "target_peak_rss_mib": 650,
+  "hosting_environment": false
+}

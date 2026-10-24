@@ -1,0 +1,7 @@
+{
+  "http_health": "ok",
+  "root_http_status": 200,
+  "seconds_to_health": 0.5122347659998923,
+  "actual_host_tested": false,
+  "environment": "local isolated Streamlit process"
+}

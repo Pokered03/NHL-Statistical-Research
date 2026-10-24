@@ -1,0 +1,62 @@
+{
+  "software_tests_passed": 35,
+  "unrelated_adapter_tests_skipped": 6,
+  "test_seconds": 2.39,
+  "sqlite_integrity": "ok",
+  "foreign_keys": "ok",
+  "local_http_server": {
+    "http_health": "ok",
+    "root_http_status": 200,
+    "seconds_to_health": 0.5122347659998923,
+    "actual_host_tested": false,
+    "environment": "local isolated Streamlit process"
+  },
+  "performance": {
+    "sport": "nhl",
+    "environment": "local Streamlit AppTest; not deployed hosting",
+    "cold_render_seconds": 0.6793499620007424,
+    "initial_matchup_render_seconds": 0.0399811140005113,
+    "switch_p95_seconds": 0.07168628999988869,
+    "switches": 64,
+    "rss_samples": [
+      {
+        "switch": 8,
+        "peak_rss_mib": 140.12890625
+      },
+      {
+        "switch": 16,
+        "peak_rss_mib": 141.23046875
+      },
+      {
+        "switch": 32,
+        "peak_rss_mib": 143.6484375
+      },
+      {
+        "switch": 64,
+        "peak_rss_mib": 143.75
+      }
+    ],
+    "peak_rss_mib": 143.75,
+    "db_mib": 5.703125,
+    "targets": {
+      "cold_render_seconds": 10,
+      "switch_p95_seconds": 2,
+      "peak_rss_mib": 350
+    },
+    "actual_host_limits_tested": false,
+    "local_targets_pass": true
+  },
+  "worker_performance": {
+    "sport": "nhl",
+    "operation": "Active-season cached free-data refresh plus full chronological validation",
+    "seconds": 13.524582482000369,
+    "worker_peak_rss_mib": 206.76171875,
+    "exit_code": 0,
+    "target_peak_rss_mib": 650,
+    "hosting_environment": false
+  },
+  "deployment_tested": false,
+  "mobile_browser_tested": false,
+  "scheduled_refresh_active": false,
+  "github_published": false
+}
