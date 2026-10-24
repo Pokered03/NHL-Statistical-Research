@@ -45,7 +45,7 @@ try:
     season=control[0].selectbox('Season (ending year)',available)
     selected_date=control[1].date_input('Research date (Eastern)',now.date())
     mode=control[2].radio('Comparison mode',['Scheduled matchup','Manual teams'],horizontal=True)
-    roster=teams(season,rev);names={t['id']:t['name'] for t in roster};info={t['id']:t for t in roster}
+    roster=teams(season,rev);names={t['id']:f"{t['name']} ({t['id']})" for t in roster};info={t['id']:t for t in roster}
     scheduled_game=None;neutral=False
     if mode=='Scheduled matchup':
         games=scheduled(season,selected_date.isoformat(),rev)
@@ -57,7 +57,7 @@ try:
             with st.expander('Sources and data coverage',expanded=True):
                 st.json(status)
             st.stop()
-        labels={g['id']:f'{g["away_name"]} at {g["home_name"]} · '+(datetime.fromisoformat(g['start']).astimezone(NY).strftime('%I:%M %p ET').lstrip('0') if g.get('start') else 'Time unavailable')+f' · {g["status"].upper()}' for g in games}
+        labels={g['id']:f'{names[g["away"]]} at {names[g["home"]]} · '+(datetime.fromisoformat(g['start']).astimezone(NY).strftime('%I:%M %p ET').lstrip('0') if g.get('start') else 'Time unavailable')+f' · {g["status"].upper()}' for g in games}
         gid=st.selectbox('Scheduled matchup',list(labels),format_func=labels.get)
         scheduled_game=next(g for g in games if g['id']==gid)
         a,b=scheduled_game['away'],scheduled_game['home'];neutral=bool(scheduled_game['neutral'])

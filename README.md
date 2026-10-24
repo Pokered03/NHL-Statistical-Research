@@ -87,3 +87,7 @@ Verify the free account’s app count, privacy rules, sleeping behavior, actual 
 The workflow commits the small prepared database and validation summary; Streamlit can redeploy from that commit. For long-term heavy use, monitor Git history growth and migrate the database to an independently managed approved object store. That storage integration is not configured.
 
 Do not mark this application complete until repository publication, automated refresh, real browser checks and actual hosted resource-limit testing have all passed.
+
+## Deployment maintenance
+
+Daily free NHL refresh is scheduled for 10:35 UTC and includes the advanced event-data integration. Public repository and ENABLE_FREE_REFRESH=true are required. No paid APIs or artifact/cache storage are configured. After imported engine code changes, reboot only this deployment and verify the new labels. Data-only updates use database revision cache keys.
