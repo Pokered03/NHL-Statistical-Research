@@ -1,0 +1,1 @@
+"""Independent NHL tests."""
