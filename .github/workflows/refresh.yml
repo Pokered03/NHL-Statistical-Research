@@ -1,0 +1,35 @@
+name: Independent free-data refresh
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 10 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: research-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    if: vars.ENABLE_FREE_REFRESH == 'true' && github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest -q
+      - run: python -m research.pipeline --seasons 2027 --advanced
+      - run: python scripts/check_data.py
+      - name: Save prepared data
+        run: |
+          git config user.name "Research data worker"
+          git config user.email "research-worker@users.noreply.github.com"
+          git add data/research.sqlite reports/backtest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh independent NHL research summaries"
+            git push
+          fi
