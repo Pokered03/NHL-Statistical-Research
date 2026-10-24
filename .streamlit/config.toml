@@ -1,0 +1,14 @@
+[theme]
+base="dark"
+primaryColor="#31d6f0"
+backgroundColor="#080b10"
+secondaryBackgroundColor="#151c27"
+textColor="#f4f6fb"
+font="sans serif"
+[server]
+headless=true
+maxUploadSize=5
+maxMessageSize=20
+fileWatcherType="none"
+[browser]
+gatherUsageStats=false
