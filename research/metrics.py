@@ -45,8 +45,8 @@ def per(key,label,section,direction=1,primitive=None,note=''):
 def ratio(key,label,section,num,den,scale=100,direction=1,note=''):
     return Metric(key,label,section,direction,tuple(num),tuple(den),scale,'%' if scale==100 else '',note)
 
-BASE=[per('points','Points scored / game','Offense'),per('allowed','Points allowed / game','Defense',-1),
-      per('margin','Scoring margin / game','Situational'),per('rest','Days between game dates','Situational',0,note='Calendar days, including the game day; 1 means back-to-back.'),
+BASE=[per('points','Goals scored / game','Offense'),per('allowed','Goals allowed / game','Defense',-1),
+      per('margin','Goal margin / game','Situational'),per('rest','Days between game dates','Situational',0,note='Calendar days, including the game day; 1 means back-to-back.'),
       per('win','Win rate','Situational')]
 FOOTBALL=[ratio('line_yards_rate','Source line yards / rush','Offense',[('line_yards',1)],[('line_rush_n',1)],1,note='Publisher rushing-line proxy; not a proprietary offensive-line grade.'),ratio('opp_line_yards_rate','Opponent line yards / rush','Defense',[('opp_line_yards',1)],[('opp_line_rush_n',1)],1,-1),ratio('recorded_disruption','Recorded QB disruption allowed','Offense',[('qb_disruption',1)],[('dropbacks',1)],100,-1,note='Recorded hurry-or-sack flags; not complete tracking pressure rate.'),ratio('opp_recorded_disruption','Recorded defensive QB disruption','Defense',[('opp_qb_disruption',1)],[('opp_dropbacks',1)],100,1,note='Provider-recorded hurries or sacks divided by observed dropbacks.'),per('pass_yards','Passing yards / game','Offense'),per('rush_yards','Rushing yards / game','Offense'),
  per('pass_td','Pass TD / game','Offense'),per('rush_td','Rush TD / game','Offense'),
@@ -101,7 +101,7 @@ HOCKEY=[ratio('xg_per_attempt','xG / modeled unblocked attempt','Offense',[('mod
  ratio('save','Team save percentage','Defense',[('saves',1)],[('opp_shots',1)]),
  ratio('powerplay','Power-play efficiency','Offense',[('pp_goals',1)],[('pp_opps',1)]),
  ratio('penaltykill','Penalty-kill efficiency','Defense',[('opp_pp_opps',1),('opp_pp_goals',-1)],[('opp_pp_opps',1)]),
- ratio('faceoff','Faceoff wins','Situational',[('faceoff_wins',1)],[('faceoff_total',1)]),
+ ratio('faceoff','Faceoff win percentage','Situational',[('faceoff_wins',1)],[('faceoff_total',1)]),
  per('xg','Observed expected goals / game','Offense',note='Publisher pre-shot xG; only games with complete unblocked-shot xG are included.'),per('opp_xg','Expected goals allowed / game','Defense',-1,note='Publisher model estimates, not observed goal outcomes.'),
  per('hdc','Shots with xG ≥ 0.20 / game','Offense',note='Explicit research definition; not a vendor high-danger chance label.'),ratio('corsi','Corsi share (all strengths)','Situational',[('attempts',1)],[('attempts',1),('opp_attempts',1)],note='Shot attempts including blocks; shootouts excluded. Block-owner events attributed to shooter.'),
  ratio('fenwick','Fenwick share (all strengths)','Situational',[('unblocked',1)],[('unblocked',1),('opp_unblocked',1)],note='Unblocked attempts; shootouts excluded.'),per('gsax','Team goalie pre-shot GSAx / game','Defense',note='Opponent on-target pre-shot xG minus goals; empty-net and shootout attempts excluded. Aggregates all goalies, not a starter prediction.')]
