@@ -1,11 +1,11 @@
 {
-  "n": 1798,
-  "brier": 0.24601887990697058,
+  "n": 1802,
+  "brier": 0.24578358148975116,
   "baseline_brier": 0.25,
-  "accuracy": 0.5472747497219133,
-  "margin_mae": 2.18586870100114,
-  "total_mae": 1.8617999960474314,
-  "ece": 0.018893297564585982,
+  "accuracy": 0.5482796892341842,
+  "margin_mae": 2.184643928586528,
+  "total_mae": 1.8613330440584854,
+  "ece": 0.018030212218232297,
   "calibration_bins": [
     {
       "lower": 0.2,
@@ -27,15 +27,15 @@
     },
     {
       "lower": 0.5,
-      "n": 1004,
-      "predicted": 0.5493889419463923,
-      "observed": 0.5448207171314741
+      "n": 1005,
+      "predicted": 0.5493866326877814,
+      "observed": 0.545273631840796
     },
     {
       "lower": 0.6,
-      "n": 316,
-      "predicted": 0.6346234788531044,
-      "observed": 0.5981012658227848
+      "n": 319,
+      "predicted": 0.6348408920898672,
+      "observed": 0.6018808777429467
     },
     {
       "lower": 0.7,
@@ -44,15 +44,15 @@
       "observed": 0.64
     }
   ],
-  "margin_interval_80_coverage": 0.7847608453837598,
+  "margin_interval_80_coverage": 0.7852386237513873,
   "version": "adjusted-score-v1",
   "status": "tested",
   "gate": true,
   "calibration_n": 2205,
   "calibration_through": "2025-03-07",
   "test_from": "2025-03-08",
-  "test_through": "2026-10-27",
-  "oos_games": 4003,
+  "test_through": "2026-10-28",
+  "oos_games": 4007,
   "calibrator": {
     "intercept": 0.11360485270138075,
     "slope": 0.6128456204201379
@@ -62,8 +62,8 @@
   "margin_q90": 3.3841508857096945,
   "total_q10": -2.9797707002250275,
   "total_q90": 2.9427868363517335,
-  "baseline_margin_mae": 2.226232483486389,
-  "baseline_total_mae": 1.842727049595776,
+  "baseline_margin_mae": 2.226672598244326,
+  "baseline_total_mae": 1.8423180071963714,
   "reason": "Gate requires >=200 calibration and test games, ECE <=0.10, Brier better than 50%, successful calibration. Thresholds are engineering safeguards, not proof of profitability.",
   "exclusions": "Draws excluded from win calibration; all scoring includes overtime/shootout scores as reported. No historical market prices are available; spread/total category reliability is unvalidated.",
   "market_validation": {
@@ -89,8 +89,8 @@
     "margin_mae": 2.196215636193439
   },
   "late": {
-    "n": 1610,
-    "margin_mae": 2.184660487450735
+    "n": 1614,
+    "margin_mae": 2.183296046907408
   },
-  "generated_at": "2026-10-28T11:16:58.744527+00:00"
+  "generated_at": "2026-10-29T11:17:24.779711+00:00"
 }
