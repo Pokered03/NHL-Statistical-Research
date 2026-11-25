@@ -1,11 +1,11 @@
 {
-  "n": 1884,
-  "brier": 0.24683124533740933,
+  "n": 1885,
+  "brier": 0.24688465330865958,
   "baseline_brier": 0.25,
-  "accuracy": 0.5456475583864119,
-  "margin_mae": 2.1806840074403153,
-  "total_mae": 1.8787351166146065,
-  "ece": 0.02435848380554637,
+  "accuracy": 0.5453580901856764,
+  "margin_mae": 2.180928541620508,
+  "total_mae": 1.8783987126681028,
+  "ece": 0.024658291388162362,
   "calibration_bins": [
     {
       "lower": 0.2,
@@ -27,9 +27,9 @@
     },
     {
       "lower": 0.5,
-      "n": 1007,
-      "predicted": 0.5495896254139873,
-      "observed": 0.5332671300893744
+      "n": 1008,
+      "predicted": 0.5496292148501208,
+      "observed": 0.5327380952380952
     },
     {
       "lower": 0.6,
@@ -50,15 +50,15 @@
       "observed": 1.0
     }
   ],
-  "margin_interval_80_coverage": 0.7871549893842887,
+  "margin_interval_80_coverage": 0.7872679045092839,
   "version": "adjusted-score-v1",
   "status": "tested",
   "gate": true,
   "calibration_n": 2305,
   "calibration_through": "2025-03-20",
   "test_from": "2025-03-21",
-  "test_through": "2026-11-23",
-  "oos_games": 4189,
+  "test_through": "2026-11-24",
+  "oos_games": 4190,
   "calibrator": {
     "intercept": 0.11782302538232918,
     "slope": 0.6292244012071815
@@ -68,8 +68,8 @@
   "margin_q90": 3.376176736656681,
   "total_q10": -2.9783498731463545,
   "total_q90": 2.9333158652134004,
-  "baseline_margin_mae": 2.222480819381194,
-  "baseline_total_mae": 1.851024222604532,
+  "baseline_margin_mae": 2.2224223670816934,
+  "baseline_total_mae": 1.8509550876896352,
   "reason": "Gate requires >=200 calibration and test games, ECE <=0.10, Brier better than 50%, successful calibration. Thresholds are engineering safeguards, not proof of profitability.",
   "exclusions": "Draws excluded from win calibration; all scoring includes overtime/shootout scores as reported. No historical market prices are available; spread/total category reliability is unvalidated.",
   "market_validation": {
@@ -95,8 +95,8 @@
     "margin_mae": 2.179685613182348
   },
   "late": {
-    "n": 1694,
-    "margin_mae": 2.180795987906085
+    "n": 1695,
+    "margin_mae": 2.1810678669321604
   },
-  "generated_at": "2026-11-24T20:50:18.344539+00:00"
+  "generated_at": "2026-11-25T20:06:53.445485+00:00"
 }
